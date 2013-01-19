@@ -20,8 +20,25 @@ Generate new Rails project:
 
 Besides basic functionality Rails has to offer, we'll need to include `joosy` gem and the Twitter bootstrap assets to make our blog look better. This is the gemfile we are supposed to work with:
 
-{% assign gist_file = 'Gemfile.rb' %}
-{% include gist.html %}
+<div class="black_wheel">
+<pre>
+source 'https://rubygems.org'
+
+gem 'rails', '3.2.11'
+gem 'sqlite3'
+
+gem 'jquery-rails'
+gem 'joosy'
+gem 'sass-rails', '~> 3.2.3'
+
+group :assets do
+  gem 'coffee-rails', '~> 3.2.1'
+  gem 'anjlab-bootstrap-rails', :require => 'bootstrap-rails'
+  gem 'font-awesome-sass-rails'
+  gem 'uglifier', '>= 1.0.3'
+end
+</pre>
+</div>
 
 Now make bundler handle the dependencies:
 
