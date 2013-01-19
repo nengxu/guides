@@ -54,7 +54,7 @@ We need one more thing to do to include twitter bootstrap. Rename your `app/asse
 
 body {
 
-padding-top: 60px;
+  padding-top: 60px;
 
 }
 </pre></div>
@@ -66,9 +66,23 @@ Using Rails scaffold let's prepare some entities we will need inside our blog:
 
 We'll have to modify our models a bit to define an association. Another thing to do is to prepare some seeds.
 
-{% assign gist_file = 'Models.rb' %}
-{% include gist.html %}
+<div class="black_wheel"><pre>
+# app/models/post.rb
+class Post < ActiveRecord::Base
+  attr_accessible :body, :comments_count, :title
 
+  has_many :comments
+
+end
+
+# app/models/comment.rb
+class Comment < ActiveRecord::Base
+  attr_accessible :body, :post
+
+  belongs_to :post, :counter_cache => true
+
+end
+</pre></div>
 {% assign gist_file = 'Seeds.rb' %}
 {% include gist.html %}
 
