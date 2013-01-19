@@ -22,6 +22,7 @@ Besides basic functionality Rails has to offer, we'll need to include `joosy` ge
 
 <div class="black_wheel">
 <pre>
+# Gemfile
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.11'
