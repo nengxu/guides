@@ -54,7 +54,7 @@ We need one more thing to do to include twitter bootstrap. Rename your `app/asse
 
 body {
 
-padding-top: 60px;
+  padding-top: 60px;
 
 }
 </pre></div>
