@@ -20,8 +20,7 @@ Generate new Rails project:
 
 Besides basic functionality Rails has to offer, we'll need to include `joosy` gem and the Twitter bootstrap assets to make our blog look better. This is the gemfile we are supposed to work with:
 
-<div class="black_wheel">
-<pre>
+<div class="black_wheel"><pre>
 # Gemfile
 source 'https://rubygems.org'
 
@@ -38,8 +37,7 @@ group :assets do
   gem 'font-awesome-sass-rails'
   gem 'uglifier'
 end
-</pre>
-</div>
+</pre></div>
 
 Now make bundler handle the dependencies:
 
@@ -48,8 +46,18 @@ Now make bundler handle the dependencies:
 
 We need one more thing to do to include twitter bootstrap. Rename your `app/assets/stylesheets/application.css` to `app/assets/stylesheets/application.css.scss` and fill it with following content:
 
-{% assign gist_file = 'application.css.scss' %}
-{% include gist.html %}
+<div class="black_wheel"><pre>
+// app/assets/stylesheets/application.css.scss
+@import "twitter/bootstrap";
+@import "twitter/bootstrap-responsive";
+@import 'font-awesome';
+
+body {
+
+padding-top: 60px;
+
+}
+</pre></div>
 
 Using Rails scaffold let's prepare some entities we will need inside our blog:
 
