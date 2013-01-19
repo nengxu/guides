@@ -25,18 +25,18 @@ Besides basic functionality Rails has to offer, we'll need to include `joosy` ge
 # Gemfile
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.11'
+gem 'rails'
 gem 'sqlite3'
 
 gem 'jquery-rails'
 gem 'joosy'
-gem 'sass-rails', '~> 3.2.3'
+gem 'sass-rails'
 
 group :assets do
-  gem 'coffee-rails', '~> 3.2.1'
+  gem 'coffee-rails'
   gem 'anjlab-bootstrap-rails', :require => 'bootstrap-rails'
   gem 'font-awesome-sass-rails'
-  gem 'uglifier', '>= 1.0.3'
+  gem 'uglifier'
 end
 </pre>
 </div>
