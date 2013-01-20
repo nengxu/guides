@@ -27,7 +27,7 @@ source 'https://rubygems.org'
 gem 'rails'
 gem 'sqlite3'
 
-gem 'jquery-rails'
+gem 'jquery-rails', '2.1.4'
 gem 'joosy'
 gem 'sass-rails'
 
